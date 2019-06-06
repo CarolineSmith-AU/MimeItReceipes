@@ -5,11 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#6FC2CC"
-    tools:context=".LoginActivity">
+    tools:context="com.example.mimeitreceipes.Login.LoginActivity">
 
     <include
         android:id="@+id/toolbar"
-        layout="@layout/toolbar"></include>
+        layout="@layout/toolbar">
+    </include>
 
     <ImageView
         android:id="@+id/logoImageView"
@@ -44,7 +45,7 @@
         app:layout_constraintVertical_bias="0.019">
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/text_input_username"
+            android:id="@+id/usernameTextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:errorEnabled="true">
@@ -57,7 +58,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/rounded_corners_edit_text"
-                android:hint="@string/username_edit_text"
+                android:hint="@string/username_string"
                 android:inputType="textAutoComplete|text"
                 android:padding="12dp"
                 android:textSize="24sp"
@@ -70,11 +71,10 @@
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/text_input_email"
+            android:id="@+id/emailTextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:errorEnabled="true"
-            app:passwordToggleEnabled="true">
+            app:errorEnabled="true" >
 
             <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
@@ -85,7 +85,7 @@
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/rounded_corners_edit_text"
                 android:ems="10"
-                android:hint="@string/email_edit_text"
+                android:hint="@string/email_string"
                 android:inputType="textAutoComplete|textEmailAddress"
                 android:padding="12dp"
                 android:textSize="24sp"
@@ -106,8 +106,8 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/rounded_corners_button"
         android:backgroundTint="#085851"
-        android:onClick="loginOrShowError"
-        android:text="@string/login_button"
+        android:onClick="loginOrShowErrors"
+        android:text="@string/login_string"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -123,14 +123,14 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/sign_up_text_view"
+        android:text="@string/sign_up_link_string"
         android:textColor="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginButton"
         app:layout_constraintVertical_bias="0.106"
-        tools:text="@string/sign_up_text_view" />
+        tools:text="@string/sign_up_link_string" />
 
     <ProgressBar
         android:id="@+id/loginRequestProgressBar"

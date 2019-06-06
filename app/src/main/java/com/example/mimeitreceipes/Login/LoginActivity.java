@@ -1,8 +1,10 @@
-package com.example.mimeitreceipes;
+package com.example.mimeitreceipes.Login;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+
+import com.example.mimeitreceipes.R;
 
 import java.util.Objects;
 
@@ -16,7 +18,7 @@ public class LoginActivity extends AppCompatActivity {
         /* << -------------------- set up toolbar -------------------- >> */
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        Objects.requireNonNull(getSupportActionBar()).setTitle("Login");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("com/example/mimeitreceipes/Login");
 
     }
 }

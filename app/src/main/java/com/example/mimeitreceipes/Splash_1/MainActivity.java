@@ -1,8 +1,11 @@
-package com.example.mimeitreceipes;
+package com.example.mimeitreceipes.Splash_1;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.mimeitreceipes.Login.LoginActivity;
+import com.example.mimeitreceipes.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

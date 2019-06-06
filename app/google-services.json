@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1060065832689",
+    "firebase_url": "https://mimeit-recipes.firebaseio.com",
+    "project_id": "mimeit-recipes",
+    "storage_bucket": "mimeit-recipes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060065832689:android:eea5bc2aad5b1ced",
+        "android_client_info": {
+          "package_name": "com.example.mimeitreceipes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060065832689-d4ttmhv36r06lii5mok8f2b080l9akge.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mimeitreceipes",
+            "certificate_hash": "6869cfbaf2dee98aadf0d9172526c6a774ad362f"
+          }
+        },
+        {
+          "client_id": "1060065832689-8bm5041oelk4lb5k8eg5579q15o2838e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKpsiwu_ShaOIINCZuTOqZy4UWE5jREVs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060065832689-8bm5041oelk4lb5k8eg5579q15o2838e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
