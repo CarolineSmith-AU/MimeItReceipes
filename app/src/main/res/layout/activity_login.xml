@@ -12,26 +12,10 @@
         layout="@layout/toolbar">
     </include>
 
-    <ImageView
-        android:id="@+id/logoImageView"
-        android:layout_width="123dp"
-        android:layout_height="107dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:transitionName="@string/shared_element_1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@mipmap/ic_launcher_round" />
-
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="363dp"
-        android:layout_height="206dp"
+        android:layout_width="362dp"
+        android:layout_height="221dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -41,11 +25,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoImageView"
-        app:layout_constraintVertical_bias="0.019">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.1">
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/usernameTextInputLayout"
+            android:id="@+id/emailTextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:errorEnabled="true">
@@ -58,23 +42,23 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/rounded_corners_edit_text"
-                android:hint="@string/username_string"
-                android:inputType="textAutoComplete|text"
+                android:hint="@string/email_string"
+                android:inputType="textAutoComplete|textEmailAddress"
                 android:padding="12dp"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.322"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/logoImageView"
                 app:layout_constraintVertical_bias="0.0" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/emailTextInputLayout"
+            android:id="@+id/passwordTextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:errorEnabled="true" >
+            app:errorEnabled="true"
+            app:passwordToggleEnabled="true">
 
             <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
@@ -85,8 +69,8 @@
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/rounded_corners_edit_text"
                 android:ems="10"
-                android:hint="@string/email_string"
-                android:inputType="textAutoComplete|textEmailAddress"
+                android:hint="@string/password_string"
+                android:inputType="textPassword|textAutoComplete"
                 android:padding="12dp"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -106,7 +90,6 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/rounded_corners_button"
         android:backgroundTint="#085851"
-        android:onClick="loginOrShowErrors"
         android:text="@string/login_string"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -134,14 +117,32 @@
 
     <ProgressBar
         android:id="@+id/loginRequestProgressBar"
-        android:layout_width="103dp"
-        android:layout_height="93dp"
+        android:layout_width="207dp"
+        android:layout_height="218dp"
         android:foregroundGravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.465" />
+        app:layout_constraintVertical_bias="0.916"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/or_string"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpTextView"
+        app:layout_constraintVertical_bias="0.05" />
 
 
 </android.support.constraint.ConstraintLayout>

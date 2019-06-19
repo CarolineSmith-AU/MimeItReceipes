@@ -42,36 +42,21 @@
         app:layout_constraintVertical_bias="0.05">
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/lastNameTextInputLayout"
+            android:id="@+id/usernameTextInputLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:errorEnabled="true">
 
             <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:hint="@string/last_name_string"
+                android:background="@drawable/rounded_corners_edit_text"
+                android:hint="@string/username_string"
+                android:inputType="text|textAutoComplete"
                 android:padding="15dp"
-                android:textSize="24sp"
-                android:background="@drawable/rounded_corners_edit_text"/>
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/firstNameTextInputLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <android.support.design.widget.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/first_name_string"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:padding="15dp"
-                android:textSize="24sp"
-                android:background="@drawable/rounded_corners_edit_text"/>
+                android:textSize="24sp" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -84,32 +69,36 @@
             <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/email_string"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_corners_edit_text"
+                android:hint="@string/email_string"
+                android:inputType="text|textEmailAddress"
                 android:padding="15dp"
-                android:textSize="24sp"
-                android:background="@drawable/rounded_corners_edit_text"/>
+                android:textSize="24sp" />
 
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/usernameTextInputLayout"
+            android:id="@+id/passwordTextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:errorEnabled="true">
+            app:errorEnabled="true"
+            app:passwordToggleEnabled="true">
 
             <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/username_string"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_corners_edit_text"
+                android:hint="@string/password_string"
+                android:inputType="textPassword|textAutoComplete"
                 android:padding="15dp"
-                android:textSize="24sp"
-                android:background="@drawable/rounded_corners_edit_text"/>
+                android:textSize="24sp" />
 
         </android.support.design.widget.TextInputLayout>
+
 
     </LinearLayout>
 
@@ -122,7 +111,6 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/rounded_corners_button"
         android:backgroundTint="#085851"
-        android:onClick="register"
         android:text="@string/register_string"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -141,6 +129,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.465" />
+        app:layout_constraintVertical_bias="0.465"
+        android:visibility="invisible"/>
 
 </android.support.constraint.ConstraintLayout>
