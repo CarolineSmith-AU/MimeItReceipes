@@ -1,9 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Profile.ProfileActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff">
+
+        <!-- top layout_toolbar with tabs -->
+        <RelativeLayout
+            android:id="@+id/profileToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/snippet_top_profile_bar" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/profileInfo"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_below="@id/profileToolbarLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:background="@color/cool_lighter_blue"
+            android:gravity="center">
+
+            <include layout="@layout/snippet_profile_info" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/profileInfo"
+            android:background="@drawable/white_gray_border_top">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cool_lighter_blue">
+
+                <RelativeLayout
+                    android:id="@+id/profileRecyclerViewLayout"
+                    android:layout_width="385dp"
+                    android:layout_height="407dp"
+                    android:layout_above="@+id/profileBottomNavView"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp">
+
+                    <include layout="@layout/snippet_profile_recyclerview" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <include layout="@layout/layout_bottom_navigation" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

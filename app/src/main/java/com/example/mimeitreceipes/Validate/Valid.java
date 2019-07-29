@@ -1,9 +1,12 @@
-package com.example.mimeitreceipes.ValidEmailPass;
+package com.example.mimeitreceipes.Validate;
 
 import android.content.Context;
 import android.support.design.widget.TextInputLayout;
 import android.util.Log;
 import android.widget.Toast;
+
+import com.example.mimeitreceipes.Models.User;
+import com.google.firebase.database.DataSnapshot;
 
 public class Valid {
     private Context context;
@@ -74,5 +77,4 @@ public class Valid {
         }
         return valid;
     }
-
 }

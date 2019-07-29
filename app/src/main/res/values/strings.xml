@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MimeIt Receipes</string>
+    <string name="app_name">MimeIt Recipes</string>
     <string name="shared_element_1">shared_element_1</string>
     <string name="or_string">or</string>
     <string name="login_string">Login</string>
@@ -10,4 +10,24 @@
     <string name="password_string">Password</string>
     <string name="sign_up_link_string">Don\'t have an account? Sign Up!</string>
     <string name="create_an_account_text_view">CREATE AN ACCOUNT</string>
+    <string name="home_string">Home</string>
+    <string name="share_string">Share</string>
+    <string name="search_string">Search</string>
+    <string name="ratings_string">Ratings</string>
+    <string name="profile_string">Profile</string>
+    <string name="messages_string">Messages</string>
+    <string name="mimeit_recipes_string">MimeIt-Recipes</string>
+    <string name="zero_string">0</string>
+    <string name="recipes_string">Recipes</string>
+    <string name="followers_string">Followers</string>
+    <string name="following_string">Following</string>
+    <string name="edit_profile_string">Edit Profile</string>
+    <string name="sign_out_string">Sign Out</string>
+    <string name="change_password_string">Change Password</string>
+    <string name="search_restaurant_string">Search Restaurant</string>
+    <string name="create_new_recipe_string">CREATE NEW RECIPE</string>
+    <string name="recipe_name_string">Recipe Name</string>
+    <string name="description_string">Description</string>
+    <string name="change_photo_string">Change photo</string>
+    <string name="bio_string">Bio</string>
 </resources>

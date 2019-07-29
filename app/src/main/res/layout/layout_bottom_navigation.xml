@@ -7,14 +7,14 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true">
 
-        <android.support.design.widget.BottomNavigationView
-            android:id="@+id/bottonNavigationView"
+        <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+            android:id="@+id/bottomNavigationView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/white_gray_border_top"
             app:menu="@menu/menu_bottom_navigation">
 
-        </android.support.design.widget.BottomNavigationView>
+        </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>
 
     </RelativeLayout>
 </merge>

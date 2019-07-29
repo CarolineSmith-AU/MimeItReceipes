@@ -9,10 +9,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.mimeitreceipes.Firebase.FirebaseMethods;
+import com.example.mimeitreceipes.Firebase.FireBaseMethods;
 import com.example.mimeitreceipes.Home.HomeActivity;
 import com.example.mimeitreceipes.R;
-import com.example.mimeitreceipes.ValidEmailPass.Valid;
+import com.example.mimeitreceipes.Validate.Valid;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Objects;
@@ -23,7 +23,7 @@ public class RegisterActivity extends AppCompatActivity {
     private TextInputLayout usernameTextInputLayout;
     private TextInputLayout emailTextInputLayout;
     private TextInputLayout passwordTextInputLayout;
-    private FirebaseMethods firebaseMethods;
+    private FireBaseMethods firebaseMethods;
     private Valid valid;
     private static final String TAG = "RegisterActivity";
     public static String PREFS = "MyPrefs";
@@ -44,13 +44,13 @@ public class RegisterActivity extends AppCompatActivity {
 
 
 
-        /* << -------------------- set up toolbar -------------------- >> */
+        /* << -------------------- set up layout_toolbar -------------------- >> */
         setUpToolBar();
 
 
 
         /* << -------------------- Initialize Firebase Auth -------------------- >> */
-        firebaseMethods = new FirebaseMethods(RegisterActivity.this);
+        firebaseMethods = new FireBaseMethods(RegisterActivity.this);
 
 
 
@@ -65,7 +65,7 @@ public class RegisterActivity extends AppCompatActivity {
                 valid = new Valid(RegisterActivity.this, emailTextInputLayout, passwordTextInputLayout);
 
                 if (valid.validForms()) {
-                    firebaseMethods.createAccount(email, password, username, HomeActivity.class);
+                    firebaseMethods.createAccount(email, password, username, usernameTextInputLayout, HomeActivity.class);
                 }
             }
         });

@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.SpannableString;
 import android.text.Spanned;
-import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.util.Log;
@@ -16,14 +15,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.mimeitreceipes.Firebase.FirebaseMethods;
+import com.example.mimeitreceipes.Firebase.FireBaseMethods;
 import com.example.mimeitreceipes.Home.HomeActivity;
 import com.example.mimeitreceipes.R;
 import com.example.mimeitreceipes.Register.RegisterActivity;
 
-import com.example.mimeitreceipes.ValidEmailPass.Valid;
+import com.example.mimeitreceipes.Validate.Valid;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -36,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button loginButton;
     private TextView signUpTextView;
     private ProgressBar loginRequestProgressBar; //TODO: Figure out how to handle ProgressBar
-    private FirebaseMethods firebaseMethods;
+    private FireBaseMethods firebaseMethods;
     private static final String TAG = "LoginActivity";
     private Valid valid;
     public String PREFS = "MyPrefs";
@@ -56,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-        /* << -------------------- set up toolbar -------------------- >> */
+        /* << -------------------- set up layout_toolbar -------------------- >> */
         setUpToolBar();
 
 
@@ -124,7 +122,7 @@ public class LoginActivity extends AppCompatActivity {
         loginRequestProgressBar = findViewById(R.id.loginRequestProgressBar);
 
         /* << -------------------- init Firebase auth. -------------------- >> */
-        firebaseMethods = new FirebaseMethods(LoginActivity.this);
+        firebaseMethods = new FireBaseMethods(LoginActivity.this);
         mAuth = FirebaseAuth.getInstance();
     }
 }
